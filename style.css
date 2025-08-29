@@ -39,6 +39,7 @@ body{
     width: 100%;
     justify-content:space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .nav .left{
@@ -46,13 +47,14 @@ body{
     gap:20px;
     margin-left: 15px;
     margin-top: 10px;
+    align-items: center;
 }
 
 .nav .left .two{
     display: flex;
     color: var(--primaryColor);
     gap:-20px;
-    
+    align-items: center;
 }
 
 .nav .left .one{
@@ -133,6 +135,7 @@ p{
     display: flex;
     margin:24px 10px;
     gap:10px;
+    flex-wrap: wrap;
 }
 
 #about{
@@ -237,4 +240,125 @@ h2{
 #projects ol a:hover{
     
     color: hsl(0, 0%, 70%);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+    .main {
+        max-width: 95vw;
+        margin: 10px 0;
+        border-radius: 5px;
+    }
+    
+    .nav {
+        padding: 10px 0;
+    }
+    
+    .nav .left {
+        margin-left: 10px;
+        gap: 10px;
+    }
+    
+    .nav .right {
+        margin-right: 10px;
+    }
+    
+    .material-symbols-outlined {
+        font-size: 30px;
+    }
+    
+    .nav .left .one {
+        font-size: 25px;
+    }
+    
+    #name {
+        font-size: 20px;
+    }
+    
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin: 15px;
+        grid-template-areas:
+            "aside"
+            "about"
+            "skills"
+            "projects";
+    }
+    
+    #aside {
+        position: static;
+        width: 95%;
+        margin: 0 auto;
+    }
+    
+    #profile {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin: 0 15px;
+    }
+    
+    p {
+        font-size: 16px;
+        margin: 20px 15px;
+    }
+    
+    #aside p {
+        font-size: 14px;
+        margin: 8px;
+    }
+    
+    .card {
+        justify-content: center;
+        margin: 20px 15px;
+    }
+    
+    .skillIcons {
+        height: 40px;
+    }
+    
+    #projects ol {
+        padding: 15px;
+    }
+    
+    .footer {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav .left .two {
+        gap: 5px;
+    }
+    
+    #name {
+        font-size: 18px;
+    }
+    
+    .material-symbols-outlined {
+        font-size: 25px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    p {
+        font-size: 15px;
+    }
+    
+    .skillIcons {
+        height: 35px;
+    }
+    
+    .card {
+        gap: 8px;
+    }
 }
